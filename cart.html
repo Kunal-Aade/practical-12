@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cart</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div class="header">
+        <div class="rightc" id="trend">TrendY</div>
+        <div class="rightc"><a href="homepage.html">Home</a></div>
+        <div class="rightc"><a href="aboutus.html">About Us</a></div>
+        <div class="rightc"><a href="category.html">Categories</a></div>
+        <div class="rightc"><a href="cart.html">Cart</a></div>
+        <div class="rightc">
+            <input type="text" placeholder="Enter Product">
+            <button class="si">Search</button>
+        </div>
+        <div class="rightc"><button class="sii"><a href="signup.html">SignUp</a></button></div>
+        <div class="rightc"><button class="si"><a href="login.html">Login</a></button></div>
+    </div>
+
+    <div class="cart-container">
+        <h2>Your Cart</h2>
+        <table id="cart-items">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Cart items will be dynamically added here -->
+            </tbody>
+        </table>
+
+        <div class="cart-summary">
+            <p id="total-price">Total: $0.00</p>
+            <button id="checkout-btn"><a href="payment.html">Proceed to Payment</a></button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+    </footer>
+
+    <script >
+  // Sample data for the products in the cart with image URLs
+const cartItems = [
+    { id: 1, name: "Wall Decorative Painting", price: 30, quantity: 1, image: 'img1.jpg' },
+    { id: 2, name: "Wool Clothes", price: 50, quantity: 2, image: 'img2.jpg' },
+    { id: 3, name: "Wireless Headphone", price: 80, quantity: 1, image: 'img3.webp' }
+];
+
+// Function to calculate total price
+function calculateTotal() {
+    let total = 0;
+    cartItems.forEach(item => {
+        total += item.price * item.quantity;
+    });
+    document.getElementById('total-price').innerText = `Total: $${total.toFixed(2)}`;
+}
+
+// Function to update the cart table
+function updateCartTable() {
+    const cartTableBody = document.querySelector('#cart-items tbody');
+    cartTableBody.innerHTML = ""; // Clear the current table content
+
+    cartItems.forEach(item => {
+        const row = document.createElement('tr');
+        
+        // Product image
+        const imageCell = document.createElement('td');
+        const productImage = document.createElement('img');
+        productImage.src = item.image;
+        productImage.alt = item.name;
+        productImage.classList.add('cart-item-image');
+        imageCell.appendChild(productImage);
+        
+        // Product name
+        const productCell = document.createElement('td');
+        productCell.innerText = item.name;
+        
+        // Price
+        const priceCell = document.createElement('td');
+        priceCell.innerText = `$${item.price.toFixed(2)}`;
+        
+        // Quantity
+        const quantityCell = document.createElement('td');
+        const quantityInput = document.createElement('input');
+        quantityInput.type = 'number';
+        quantityInput.value = item.quantity;
+        quantityInput.min = 1;
+        quantityInput.addEventListener('input', (event) => {
+            item.quantity = parseInt(event.target.value);
+            calculateTotal();
+        });
+        quantityCell.appendChild(quantityInput);
+
+        // Total
+        const totalCell = document.createElement('td');
+        totalCell.innerText = `$${(item.price * item.quantity).toFixed(2)}`;
+
+        // Remove Button
+        const actionCell = document.createElement('td');
+        const removeButton = document.createElement('button');
+        removeButton.innerText = "Remove";
+        removeButton.addEventListener('click', () => {
+            const index = cartItems.indexOf(item);
+            if (index > -1) {
+                cartItems.splice(index, 1);
+                updateCartTable();  // Re-update the table
+                calculateTotal();   // Recalculate the total
+            }
+        });
+        actionCell.appendChild(removeButton);
+
+        // Append all cells to the row
+        row.appendChild(imageCell);
+        row.appendChild(productCell);
+        row.appendChild(priceCell);
+        row.appendChild(quantityCell);
+        row.appendChild(totalCell);
+        row.appendChild(actionCell);
+
+        // Append the row to the table
+        cartTableBody.appendChild(row);
+    });
+
+    // Calculate total price
+    calculateTotal();
+}
+
+// Event listener for the Checkout button
+document.getElementById('checkout-btn').addEventListener('click', () => {
+    alert('Proceeding to payment...');
+});
+
+// Initial setup
+updateCartTable();
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div class="header">
+        <div class="rightc" id="trend">TrendY</div>
+        <div class="rightc"><a href="homepage.html">Home</a></div>
+        <div class="rightc"><a href="aboutus.html">About Us</a></div>
+        <div class="rightc"><a href="category.html">Categories</a></div>
+        <div class="rightc"><a href="cart.html">Cart</a></div>
+        <div class="rightc">
+            <input type="text" placeholder="Enter Product">
+            <button class="si">Search</button>
+        </div>
+        <div class="rightc"><button class="sii"><a href="signup.html">SignUp</a></button></div>
+        <div class="rightc"><button class="si"><a href="login.html">Login</a></button></div>
+    </div>
+
+    <div class="payment-container">
+        <h2>Payment Information</h2>
+        <form class="payment-form">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required placeholder="Enter Name">
+            
+            <label for="card-number">Credit Card Number</label>
+            <input type="text" id="card-number" name="card-number" required placeholder="1234 5678 1234 5678">
+            
+            <label for="expiry-date">Expiration Date</label>
+            <input type="month" id="expiry-date" name="expiry-date" required>
+            
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" name="cvv" required placeholder="123">
+            
+            <div class="payment-summary">
+                <p>Total: $150.00</p>
+            </div>
+
+            <button type="submit" id="pay-btn">Pay Now</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Simulate a payment process
+        document.getElementById("pay-btn").addEventListener("click", function(event) {
+            event.preventDefault();
+            alert("Payment successful! Thank you for your purchase.");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,349 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.header{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	
+	height: 80px;
+	box-shadow: 0px 1px 20px 9px #2a2a38;
+}
+#trend{
+        font-size: 25px;
+    color: red;
+    font-family: cursive;
+}
+}
+.rightc{
+	font-size: 17px;
+	font-family: sans-serif;
+}
+.rightc input{
+	height: 20px;
+    width: 250px;
+    border-radius: 5px;
+}
+.si{
+	height: 23px;
+    color: white;
+    background-color: #6168f5;
+    border: 1px solid blue;
+    border-radius: 5px;
+    width: 60px;
+}
+.sii{
+	height: 23px;
+    color: white;
+    background-color: orange;
+    border: 1px solid orange;
+    border-radius: 5px;
+    width: 60px;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+.main{
+	height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    margin-top: 20px;
+   justify-content: space-evenly;
+   background-color: #727c7c;
+}
+.box{
+	height: 350px;
+	width: 250px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: inline-block;
+    margin: 10px;
+    background-color: white;
+}
+.photo{
+	height: 260px;
+    width: 210px;
+    margin-left: 18px;
+    margin-top: 10px;
+}
+.text{
+	margin: 10px;
+}
+footer {
+    text-align: center;
+    background-color: #2a2a38;
+    color: white;
+    padding: 15px 0;
+}
+
+footer p {
+    font-size: 1em;
+}
+/* Existing CSS */
+
+/* New Styles for About Us page */
+.about-container {
+    width: 80%;
+    margin: 30px auto;
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-container h1 {
+    font-size: 2em;
+    color: #2a2a38;
+    margin-bottom: 20px;
+}
+
+.about-container p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.about-details {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.about-box {
+    width: 30%;
+    padding: 20px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-box h2 {
+    font-size: 1.5em;
+    color: #6168f5;
+    margin-bottom: 15px;
+}
+
+.about-box ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-box ul li {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    background-color: #2a2a38;
+    color: white;
+    padding: 15px 0;
+    margin-top: 30px;
+}
+
+footer p {
+    font-size: 1em;
+}
+/* Existing CSS */
+
+/* Categories Section Styles */
+.categories {
+    width: 80%;
+    margin: 30px auto;
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.categories h2 {
+    font-size: 2em;
+    color: #2a2a38;
+    margin-bottom: 30px;
+}
+
+.category-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.category-item {
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.category-item:hover {
+    transform: scale(1.05);
+}
+
+.category-image {
+    height: 200px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.category-name {
+    font-size: 1.5em;
+    color: #6168f5;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 0 0 8px 8px;
+}
+
+/* Ensure responsive layout */
+@media screen and (max-width: 768px) {
+    .category-item {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .category-item {
+        width: 90%;
+    }
+}
+/* General styles (existing ones) */
+
+/* Cart Page Styles */
+.cart-container {
+    width: 80%;
+    margin: 30px auto;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-container h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#cart-items {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#cart-items th, #cart-items td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+#cart-items th {
+    background-color: #6168f5;
+    color: white;
+}
+
+.cart-summary {
+    text-align: right;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+#checkout-btn {
+    background-color: #6168f5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#checkout-btn:hover {
+    background-color: #5153d0;
+}
+
+.cart-item-image {
+    width: 50px; /* Adjust image size */
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+/* Payment Page Styles */
+.payment-container {
+    width: 50%;
+    margin: 50px auto;
+    background-color: #f5f5f5;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.payment-container h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.payment-form label {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.payment-form input {
+    padding: 10px;
+    font-size: 1em;
+    width: 100%;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.payment-form input:focus {
+    outline-color: #6168f5;
+    border-color: #6168f5;
+}
+
+.payment-summary {
+    font-size: 1.2em;
+    text-align: right;
+    margin-top: 20px;
+}
+
+#pay-btn {
+    background-color: #6168f5;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#pay-btn:hover {
+    background-color: #5153d0;
+}
+
+footer {
+    text-align: center;
+    background-color: #2a2a38;
+    color: white;
+    padding: 15px 0;
+    margin-top: 30px;
+}
